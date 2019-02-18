@@ -1,0 +1,72 @@
+/* Be sure your website works at all window widths/sizes. */
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+    /* <!-- @media (min-width: @screen-sm-min) { ... } --> */
+
+/* Medium devices (desktops, 992px and up) */
+    /* <!-- @media (min-width: @screen-md-min) { ... } --> */
+
+/* Large devices (large desktops, 1200px and up) */
+    /* <!-- @media (min-width: @screen-lg-min) { ... } --> */
+
+/* to compensate for navbar */
+body { padding-top: 70px; 
+    }
+
+.custom_brand{background-color:  rgb(143, 143, 212);
+    }
+
+.n_text{color: white}
+
+/* page color set */
+/* navbar background-color: #f8f8f8; */
+/* navbar border-color: #e7e7e7; */
+.background{background-color: #e7e7e7}
+
+/* to keep elements white */
+/* spacing between text/visual elements and white border */
+.main_box{background-color: #f8f8f8;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 15px;
+    padding-bottom: 10px;}
+
+/* spacing between visualizations column and main column */
+/* only necessary on med and large screens */
+.visualizations{margin-left: 30px }
+
+/* spacing between images and text on detail pages */
+.chart{margin-bottom: 30px }
+
+/* extra padding inside columns */
+.alias{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+/* hidden return for small screens only */
+@media (min-width: 768px) {
+    .sm_show{
+        display: block;
+    }
+}
+
+@media (min-width: 992px) { 
+    .sm_show{
+        display: none;
+    }
+    .sm_hide{
+        display: block;
+    }
+}
+
+@media (max-width: 992px) {
+    .sm_hide{
+        display: none;
+    }
+}
+

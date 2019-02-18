@@ -1,0 +1,114 @@
+<!-- Landing page (1 of 7) -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Latitude Summary</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="background">
+<!-- Navigation Menu -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Website title/brand -->
+        <!-- Link to return to landing page from any page. -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="landing_page.html">Latitude</a>
+            <!-- toggle button for small screens -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+        </div>
+        <!-- Right-justified navbar elements -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- Plots dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <!-- Plots links -->
+                        <li><a href="temp.html">Temperature</a></li>
+                        <li><a href="humidity.html">Humidity</a></li>
+                        <li><a href="cloudiness.html">Cloudiness</a></li>
+                        <li><a href="wind_speed.html">Wind-Speed</a></li>
+                    </ul>
+                </li>
+                <!-- Comparisons and Data links -->
+                <li><a href="comparisons.html">Comparisons</a></li>
+                <li><a href="weather_data.html">Data</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav><!-- end of navbar-->
+                
+
+
+<div class="container">
+    <div class="row">
+
+        <!-- Explanation of the project. -->
+        <div class="col-md-7 alias" style="background-color: #f8f8f8">
+            <!-- Summary header -->
+            <h2>About</h2>
+            <hr>
+            <!-- Summary paragraph -->
+            <p>Does temperature increase closer to the equator?</p>
+            <p>How does latitude affect other aspects of weather?</p>
+            <p>To test the generally accepted fact that it is warmer nearer to the equator
+                we gathered weather data from OpenWeatherMap API using a randomly generated set of cities. 
+                Scatter plots were generated using MatPlotLib to show relationships and explore
+                 any interesting patterns in the data.
+            </p>
+        
+            <p class="sm_show">Explore the visualizations below.</p>
+            <p class="sm_hide">Explore the visualizations to the right.</p>
+
+        </div>
+        <div class="col-md-1 col-sm-12"></div>
+        <!-- <hr> -->
+        <hr class="sm_show">
+        
+        <!-- Navigation side-bar -->
+        <div class="col-md-4 alias" style="background-color: #f8f8f8">
+            <h3>Visualizations</h3>
+            <hr>
+            <!-- Images sub-columns -->
+            <div class="row">
+                <div class="col-sm-6 col-md-12">
+                    <a href="temp.html" class="thumbnail">
+                        <img src="Resources/Latitude_vs_Temp.png" alt="Temperature">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-12">
+                    <a href="humidity.html" class="thumbnail">
+                        <img src="Resources/Latitude_vs_Humidity.png" alt="Humidity">
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-12">
+                    <a href="cloudiness.html" class="thumbnail">
+                        <img src="Resources/Latitude_vs_Cloudiness.png" alt="Cloudiness">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-12">
+                    <a href="wind_speed.html" class="thumbnail">
+                        <img src="Resources/Latitude_vs_Wind_speed.png" alt="Wind-Speed">
+                    </a>
+                </div>
+            </div> <!-- /Images -->
+        </div> <!-- /Navigation side-bar-->
+    </div>
+</div>
+ 
+<!-- Had to include these scripts for the dropdown menu to work -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
