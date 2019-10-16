@@ -2,7 +2,7 @@
 
 See how weather varies by latitude
 
-Deployed at: 
+Deployed at: https://jackrapp.github.io/weather_visualization/
 
 ## Project Summary
 
