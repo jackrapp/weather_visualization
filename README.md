@@ -12,7 +12,6 @@ To test the generally accepted fact that it is warmer nearer to the equator we g
 
 To gather weather data, pairs of coordinates were selected at random using a random number generator, latitude range from -90 to 90, longitude range -180 to 180. 1500 datapoints were input into the library citypy with the goal of ending up with 500 cities to compare.
 
-#### Histogram showing equal distribution of latitudes
 ![Histogram](Resources/latitude_histogram.png)
 
 Using the generated list of cities and OpenWeatherMap's API, weather data was uploaded into an empty data frame. Any cities with no weather stations are ignored and every 60 cities the API pauses to avoid the API request limit.
@@ -61,4 +60,23 @@ print("--------------")
 
 ### Data Visulaization and Analysis
 
-Using matplotlib and the library pyplot, temperature, humidity, cloudiness and windspeed are all graphed against latitude. Visit https://jackrapp.github.io/weather_visualization/ to see more
+Using matplotlib and the library pyplot, temperature, humidity, cloudiness and windspeed are all graphed against latitude.
+
+##### Temperature Comparison
+
+<img src="Resources/Latitude_vs_Temp.png">
+
+```python
+#data frame cities_df
+cities_df = pd.read_csv(output_data_file)
+plt.scatter(cities_df["Latitude"], cities_df["Temperature"], alpha=.6)
+plt.title("Temperature vs. Latitude")
+plt.xlabel("Latitude")
+plt.ylabel("Temperature (Farenheit)")
+
+#save figure
+plt.savefig("Resources/Latitude_vs_Temp.png")
+plt.show()
+```
+
+Visit https://jackrapp.github.io/weather_visualization/ to see more
